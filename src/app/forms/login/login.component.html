@@ -1,0 +1,17 @@
+<div class="container">
+<div class="login-container">
+    <form [formGroup]="loginForm" (ngSubmit)="formSubmit(loginForm)">
+        <h2>Login</h2>
+        <div class="input-group">
+            <label for="email">Email:</label><span style="color: red;" [hidden]="loginForm.get('email')?.valid||loginForm.get('email')?.untouched">*error</span>
+            <input type="email" id="email" name="email" placeholder="Enter your email" formControlName="email" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" formControlName="password" required>
+        </div>
+        <input type="submit" [disabled]="loginForm.invalid"/><button type="button" (click)="loginForm.reset()" style="background-color: red;">reset</button>
+    </form>
+
+</div>
+</div>

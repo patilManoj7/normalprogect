@@ -1,0 +1,12 @@
+<div class="container">
+<h2 class="h1">enter code snippets</h2>
+
+<form [formGroup]="form" (ngSubmit)="save(form)">
+    <span [hidden]="title.valid||title.untouched">*required</span>
+    <input type="text" name="title" placeholder="title" formControlName="title"/>
+    <span [hidden]="snippit.valid||snippit.untouched">*required</span>
+    <textarea placeholder="Enter code snippets" name="snippit" formControlName="snippit"></textarea>
+    <input type="submit" value="save" [disabled]="form.invalid"/>
+    <input type="button" value="clean" (click)="form.reset()"/>
+</form>
+</div>

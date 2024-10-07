@@ -1,0 +1,64 @@
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center; /* Center items vertically */
+    background-color: #343a40; /* Dark background */
+    padding: 15px 30px; /* Spacing around navbar */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Logo Styles */
+.navbar-logo a {
+    color: #ffffff; /* White color for the logo */
+    font-size: 1.5em; /* Larger font size for the logo */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold text */
+}
+
+/* Navbar Links */
+.navbar-links {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Flexbox for horizontal layout */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.navbar-links li {
+    margin-left: 20px; /* Space between links */
+}
+
+.navbar-links a {
+    color: #ffffff; /* White text color for links */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.1em; /* Standard font size */
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Active Link */
+.navbar-links a.active {
+   
+    border-bottom: 3px solid #ff4757; /* Highlight active link with a border */
+}
+
+/* Hover Effect */
+.navbar-links a:hover {
+    color: #ff4757; /* Change color on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack items vertically on small screens */
+        align-items: flex-start; /* Align items to the left */
+    }
+    
+    .navbar-links {
+        margin-top: 10px; /* Space above links */
+    }
+
+    .navbar-links li {
+        margin-left: 0; /* Reset margin for mobile */
+        margin-bottom: 10px; /* Space between links */
+    }
+}
